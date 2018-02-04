@@ -3,17 +3,17 @@
 <head>
 	<script src= "https://aframe.io/releases/0.7.0/aframe.min.js" ></script>
 	<script src= "https://cdn.rawgit.com/jeromeetienne/AR.js/1.4.9/aframe/build/aframe-ar.js"></script>
-	< meta name= "apple-mobile-web-app-capable" content= "yes" >
-	< script >
+	<meta name= "apple-mobile-web-app-capable" content= "yes">
+	<script>
 	AFRAME.registerComponent( 'toggle-on-tap' , {
 	init: function () {
-	this .onClick = this .onClick.bind( this );
+	this .onClick = this .onClick.bind(this);
 	},
 	play: function () {
-	window .addEventListener( 'click' , this .onClick);
+	window .addEventListener('click' , this .onClick);
 	},
 	pause: function () {
-	window .removeEventListener( 'click' , this .onClick);
+	window .removeEventListener('click' , this .onClick);
 	},
 	onClick: function (evt) {
 	var video = this .el.components.material.material.map.image;
